@@ -66,6 +66,7 @@ class SVHelper {
         this.probabilities = ["Likely","50/50","Unlikely"];
         this.npc_attitudes = ["Hostile","Neutral","Friendly"];
         this.consequences = ["Reduced Effect","Complication","Lost Opportunity","Worse Position","Harm"];
+        this.publicMethods = ["action","oracle","consequence","fortune","npcReaction","resist"];
     }
     
     get random_consequence() {
@@ -125,14 +126,7 @@ class SVHelper {
         }
     }
     
-    action(
-        rating=0,
-        position="Risky",
-        effect_level="standard",
-        push_yourself=false,
-        devils_bargain=false,
-        spend_a_gambit=false,
-        crew_assisted=false) {
+    action(rating=0,position="Risky",effect_level="standard",push_yourself=false,devils_bargain=false,spend_a_gambit=false,crew_assisted=false) {
         // @@SPM deal with lowering/raising the effect level
                 
         // let's deal with bonus die
@@ -368,7 +362,7 @@ class SVHelper {
         } else {
             result = "poor";
             position = "desperate";
-            effect = "litte";
+            effect = "little";
             threat = "standard";            
         }
         
