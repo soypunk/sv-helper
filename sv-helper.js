@@ -241,6 +241,7 @@ class SVHelper {
         let rating = probability_ratings[probability];
         
         let roll = this._base_dice_roll(rating,use_lowest);
+        let result = "";
 
         if (roll.status == "critical") {
             result = "Yes and...";
