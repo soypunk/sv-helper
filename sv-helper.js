@@ -1,3 +1,8 @@
+/*
+oracle and consequences methods use tables from:
+https://guimonocores.itch.io/omens-in-the-dark
+*/
+
 /* utils */
 class Utils {
     constructor() {}
