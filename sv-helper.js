@@ -63,7 +63,7 @@ class SVHelper {
         this.harm_levels = ["Severe","Moderate","Lesser"];
         this.effect_levels = ["Great","Standard","Limited"];
         this.positions = ["controlled","risky","desperate"];
-        this.probabilities = ["Likely","50/50","Unlikely"];
+        this.probabilities = ["Impossible","Almost Impossible","Very Unlikely","Unlikely","50/50","Very Likely","Likely","Near Sure Thing","A Sure Thing"];
         this.npc_attitudes = ["Hostile","Neutral","Friendly"];
         this.consequences = ["Reduced Effect","Complication","Lost Opportunity","Worse Position","Harm"];
         this.publicMethods = ["action","oracle","consequence","fortune","npcReaction","resist"];
