@@ -395,18 +395,19 @@ class SVHelper {
         return this.fortune(rating)
     }
     
-    resist() {
+    resist(rating=0) {
         // setup our roll result
         let stress = 6;
         let critical = false;
         let roll = this._base_dice_roll(rating);
-        stress -= highest;
+        stress -= roll.highest;
 
         if (roll.status == "critical") {
             critical = true;
         }
         
         return {
+            "roll": roll,
             "stress": stress,
             "critical": critical
         }

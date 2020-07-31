@@ -5,12 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
   <script src="./sv-helper.js"></script>
-  <body>
+  <body class="bg-near-black gray">
     <h1>Action Roll</h1>
     <pre id="actionRollOutput">Hi</pre>
     
     <h1>Fortune Roll</h1>
-    <pre id="fortuneRollOutput"></pre>    
+    <pre id="fortuneRollOutput"></pre>
+    
+    <h1>Resist Roll</h1>
+    <pre id="resistRollOutput"></pre>    
   </body>
   <script>
     const SV = new SVHelper();
@@ -30,7 +33,11 @@
     
     $fortuneRollOutput = document.getElementById("fortuneRollOutput");
     let fortune_roll = SV.fortune(2,0,0);    
-    $fortuneRollOutput.textContent = JSON.stringify(fortune_roll,null,2);    
+    $fortuneRollOutput.textContent = JSON.stringify(fortune_roll,null,2);
+    
+    $resistRollOutput = document.getElementById("resistRollOutput");
+    let resist_roll = SV.resist(2);
+    $resistRollOutput.textContent = JSON.stringify(resist_roll,null,2);
     
     //$action_output.innerHTML(JSON.stringify(action_roll));
   </script>
