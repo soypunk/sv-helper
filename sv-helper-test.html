@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="utf-8">
+  <title> </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+  <script src="./sv-helper.js"></script>
+  <body>
+    <h1>Action Roll</h1>
+    <pre id="actionRollOutput">Hi</pre>
+    
+    <h1>Fortune Roll</h1>
+    <pre id="fortuneRollOutput"></pre>    
+  </body>
+  <script>
+    const SV = new SVHelper();
+    
+    $actionRollOutput = document.getElementById("actionRollOutput");
+    let action_roll = SV.action(
+        2,
+        "Risky",
+        "standard",
+        false,
+        false,
+        false,
+        false
+    );
+    $actionRollOutput.textContent = JSON.stringify(action_roll,null,2);
+    
+    
+    $fortuneRollOutput = document.getElementById("fortuneRollOutput");
+    let fortune_roll = SV.fortune(2,0,0);    
+    $fortuneRollOutput.textContent = JSON.stringify(fortune_roll,null,2);    
+    
+    //$action_output.innerHTML(JSON.stringify(action_roll));
+  </script>
+</html>
