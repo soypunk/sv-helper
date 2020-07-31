@@ -69,7 +69,7 @@ class SVHelper {
     }
     
     get random_consequence() {
-        return this.consequences[Math.floor(Math.random() * consequences.length)];
+        return this.consequences[Math.floor(Math.random() * this.consequences.length)];
     }
     
     _base_dice_roll(num_to_roll=0,use_lowest=false) {

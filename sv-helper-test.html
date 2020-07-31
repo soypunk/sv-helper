@@ -7,7 +7,7 @@
   <script src="./sv-helper.js"></script>
   <body class="bg-near-black gray">
     <h1>Action Roll</h1>
-    <pre id="actionRollOutput">Hi</pre>
+    <pre id="actionRollOutput"></pre>
     
     <h1>Fortune Roll</h1>
     <pre id="fortuneRollOutput"></pre>
@@ -18,7 +18,7 @@
   <script>
     const SV = new SVHelper();
     
-    $actionRollOutput = document.getElementById("actionRollOutput");
+    let $actionRollOutput = document.getElementById("actionRollOutput");
     let action_roll = SV.action(
         2,
         "Risky",
@@ -31,11 +31,11 @@
     $actionRollOutput.textContent = JSON.stringify(action_roll,null,2);
     
     
-    $fortuneRollOutput = document.getElementById("fortuneRollOutput");
+    let $fortuneRollOutput = document.getElementById("fortuneRollOutput");
     let fortune_roll = SV.fortune(2,0,0);    
     $fortuneRollOutput.textContent = JSON.stringify(fortune_roll,null,2);
     
-    $resistRollOutput = document.getElementById("resistRollOutput");
+    let $resistRollOutput = document.getElementById("resistRollOutput");
     let resist_roll = SV.resist(2);
     $resistRollOutput.textContent = JSON.stringify(resist_roll,null,2);
     
