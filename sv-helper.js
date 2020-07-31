@@ -65,6 +65,7 @@ class SVHelper {
         this.positions = ["controlled","risky","desperate"];
         this.probabilities = ["Impossible","Almost Impossible","Very Unlikely","Unlikely","50/50","Very Likely","Likely","Near Sure Thing","A Sure Thing"];
         this.npc_attitudes = ["Hostile","Neutral","Friendly"];
+        this.complication_levels = ["Serious","Standard","Minor"];
         this.consequences = ["Reduced Effect","Complication","Lost Opportunity","Worse Position","Harm"];
         this.publicMethods = ["action","oracle","consequence","fortune","npcReaction","resist"];
     }
